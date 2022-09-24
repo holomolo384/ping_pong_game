@@ -8,6 +8,8 @@ def __init__(self, player_image, player_x, player_y, player_speed, width, height
 	self.rect.x = player_x
 	self.rect.y = player_y
 def reset(self):
+	window.blit(self.image, (self.rect.x, self.rect.y))
+class Player(GameSprite):											 
 	def update_r(self):
 		keys = key.get_pressed()
 		if keys[K_UP] and self.rect.y > 5:
